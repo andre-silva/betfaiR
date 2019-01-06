@@ -1,6 +1,10 @@
 betfaiR v0.8.0
 =======
 
+Note: This is a fork from https://github.com/durtal/betfaiR with a few fixes for
+the clearedOrders Date filter and record countwhich isn't working with the 
+original package
+
 `betfaiR` is an R package which provides access to Betfair's API, and allows users to retrieve data (in various amounts of detail) from available markets, to place a bet in those markets, cancel bets, replace bets, etc.  The package possibly needs a little work (it's hard to test a package like this, unless someone has suggestions), so please proceed with caution when placing any bets, and provide feedback with any issues you encounter, or features you want added.
 
 Installation instructions are below, the usage section walks through the primary function in the package and the various API methods available (which I believe is all of them).
@@ -9,7 +13,7 @@ Installation instructions are below, the usage section walks through the primary
 
 ```R
 # install devtools
-devtools::install_github("durtal/betfaiR")
+devtools::install_github("andre-silva/betfaiR")
 ```
 
 #### Help

@@ -235,7 +235,8 @@ bf_current <- function(betId = NULL, marketId = NULL, orderProjection = "ALL",
 # @return list with parameters to filter cleared bets
 bf_cleared <- function(betStatus = "SETTLED", eventTypeIds = NULL, eventIds = NULL,
                        marketIds = NULL, runnerIds = NULL, betIds = NULL,
-                       side = "BACK", to = NULL, from = NULL) {
+                       side = "BACK", to = NULL, from = NULL,
+                       fromRecord = NULL, recordCount = NULL) {
 
     orderList <- as.list(environment())
 

@@ -368,7 +368,8 @@ betfair <- function(usr, pwd, key, jurisdiction = "default") {
 
         clearedOrders <- function(betStatus = "SETTLED", eventTypeIds = NULL, eventIds = NULL,
                                   marketIds = NULL, runnerIds = NULL, betIds = NULL,
-                                  side = "BACK", from = NULL, to = NULL) {
+                                  side = "BACK", from = NULL, to = NULL,
+                                  fromRecord = NULL, recordCount = NULL) {
 
             betStatus <- intersect(toupper(betStatus), c("SETTLED",
                                                          "VOIDED",
@@ -380,7 +381,8 @@ betfair <- function(usr, pwd, key, jurisdiction = "default") {
             params <- bf_cleared(betStatus = betStatus, eventTypeIds = eventTypeIds,
                                  eventIds = eventIds, marketIds = marketIds,
                                  runnerIds = runnerIds, betIds = betIds,
-                                 side = side, from = from, to = to)
+                                 side = side, from = from, to = to,
+                                 fromRecord = fromRecord, recordCount = recordCount)
             req <- bf_request(req, params = params)
             # post request
             res <- bf_post(body = req, ssoid$ssoid)
